@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SearchService.Models;
 
 namespace SearchService.Facade.IFacades
 {
     public interface IRecordFacade
     {
+        Guid SaveRecords(IEnumerable<Record> recordList);
+        IEnumerable<Record> GetRecordBySearchString(string searchString);
+        IEnumerable<Record> GetRecordByRequestNumber(Guid requestNumber);
+
     }
 }

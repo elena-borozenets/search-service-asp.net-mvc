@@ -10,7 +10,8 @@ namespace SearchService.Infrastructure.IRepositories
     public interface IRecordRepository
     {
         IEnumerable<Record> Get();
-        void Save(IEnumerable<Record> recordList);
-        void Save(Record record);
+        Guid Save(IEnumerable<Record> recordList);
+        Guid Save(Record record);
+        IEnumerable<Record> GetRecordsByRequestNumber(Guid requestNumber);
     }
 }

@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 
 
 namespace SearchService.Facade
 {
-    using RecordDBO = SearchService.Data.Entities.Record;
-    using RecordModel = SearchService.Models.Record;
+    using RecordDBO = Data.Entities.Record;
+    using RecordModel = Models.Record;
 
     public class MappingProfile : Profile
     {
