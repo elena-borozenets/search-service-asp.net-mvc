@@ -9,6 +9,7 @@ namespace SearchService.Facade.IFacades
         Guid SaveRecords(IEnumerable<Record> recordList);
         IEnumerable<Record> GetRecordBySearchString(string searchString);
         IEnumerable<Record> GetRecordByRequestNumber(Guid requestNumber);
+        IEnumerable<Record> GetAll();
 
     }
 }

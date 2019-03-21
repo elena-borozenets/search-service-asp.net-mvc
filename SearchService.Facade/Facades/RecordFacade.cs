@@ -10,7 +10,7 @@ namespace SearchService.Facade.Facades
     using RecordDBO = Data.Entities.Record;
     using RecordModel = Models.Record;
 
-    public class RecordFacade : IRecordFacade
+    public class RecordFacade : IFacades.IRecordFacade
     {
         private readonly IRecordRepository _recordRepository;
 
@@ -36,6 +36,13 @@ namespace SearchService.Facade.Facades
         public IEnumerable<RecordModel> GetRecordByRequestNumber(Guid requestNumber)
         {
             var selectedRecords = _recordRepository.GetRecordsByRequestNumber(requestNumber);
+            var mappedResult = Mapper.Map<IEnumerable<RecordDBO>, IEnumerable<RecordModel>>(selectedRecords);
+            return mappedResult;
+        }
+
+        public IEnumerable<RecordModel> GetAll()
+        {
+            var selectedRecords = _recordRepository.Get();
             var mappedResult = Mapper.Map<IEnumerable<RecordDBO>, IEnumerable<RecordModel>>(selectedRecords);
             return mappedResult;
         }

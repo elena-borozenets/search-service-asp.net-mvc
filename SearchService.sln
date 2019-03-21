@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService.Data", "Searc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService.Tests", "SearchService.Tests\SearchService.Tests.csproj", "{3717BC19-3911-4B7B-918A-765856AFD012}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService.Models", "SearchService.Models\SearchService.Models.csproj", "{35533BFB-EDAD-4F1B-96BC-295A7812B14D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -155,6 +157,26 @@ Global
 		{3717BC19-3911-4B7B-918A-765856AFD012}.Release|x86.ActiveCfg = Release|x86
 		{3717BC19-3911-4B7B-918A-765856AFD012}.Release|x86.Build.0 = Release|x86
 		{3717BC19-3911-4B7B-918A-765856AFD012}.Release|x86.Deploy.0 = Release|x86
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Debug|ARM.Build.0 = Debug|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Debug|x64.Build.0 = Debug|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Debug|x86.Build.0 = Debug|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Release|ARM.Build.0 = Release|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Release|ARM64.Build.0 = Release|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Release|x64.ActiveCfg = Release|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Release|x64.Build.0 = Release|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Release|x86.ActiveCfg = Release|Any CPU
+		{35533BFB-EDAD-4F1B-96BC-295A7812B14D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

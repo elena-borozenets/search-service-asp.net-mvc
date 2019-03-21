@@ -61,12 +61,13 @@
       <Project>{a363155c-d67a-47be-b6b6-7394fa26ddf8}</Project>
       <Name>SearchService.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SearchService\SearchService.csproj">
-      <Project>{2caea9c1-d2e7-431a-a51a-84d402eae5b6}</Project>
-      <Name>SearchService</Name>
+    <ProjectReference Include="..\SearchService.Models\SearchService.Models.csproj">
+      <Project>{35533bfb-edad-4f1b-96bc-295a7812b14d}</Project>
+      <Name>SearchService.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
