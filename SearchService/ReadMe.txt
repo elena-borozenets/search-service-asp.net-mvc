@@ -9,3 +9,5 @@ For adding another seach engine follow next steps:
 2) open GetSearchResultAsync() method implementation. Add your own task in such template: Task<HtmlDocument> task = website.LoadFromWebAsync(yourRequest + query);
 3) add your task to parameters in Task.WhenAny() method;
 4) add your own parser for this search engine.
+
+For successful creating db change connectionString in Web.config file depends on your configuration.
