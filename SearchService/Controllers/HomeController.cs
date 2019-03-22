@@ -94,7 +94,6 @@ namespace SearchService.Controllers
 
             List<Record> recordList = new List<Record>();
             for (int i = 0; i < selectNodes.Count && i < 10; i++)
-            //foreach (var node in selectNodes)
             {
 
                 var title = selectNodes[i].Descendants("h3").ElementAt(0).InnerText;
@@ -120,7 +119,6 @@ namespace SearchService.Controllers
 
             List<Record> recordList = new List<Record>();
             for (int i = 0; i < selectNodes.Count && i < 10; i++)
-            //foreach (var node in selectNodes)
             {
 
                 var title = selectNodes[i].Descendants("h2").ElementAt(0).InnerText;
