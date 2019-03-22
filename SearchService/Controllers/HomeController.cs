@@ -1,18 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
-using System.Web.Helpers;
 using System.Web.Mvc;
-using System.Web.Script.Serialization;
-using System.Xml.Linq;
 using HtmlAgilityPack;
-using Newtonsoft.Json;
 using SearchService.Facade.IFacades;
 using SearchService.Models;
 
@@ -67,9 +59,9 @@ namespace SearchService.Controllers
             HtmlWeb website = new HtmlWeb();
             website.AutoDetectEncoding = true;
             website.OverrideEncoding = Encoding.UTF8;
-            var task1 = website.LoadFromWebAsync(requests[0] + query);
-            var task2 = website.LoadFromWebAsync(requests[1] + query);
-            var d = await Task.WhenAny(task1, task2);
+            Task<HtmlDocument> task1 = website.LoadFromWebAsync(requests[0] + query);
+            Task<HtmlDocument> task2 = website.LoadFromWebAsync(requests[1] + query);
+            var d = await Task.WhenAny(task1, task2).ConfigureAwait(false);
             HtmlDocument doc = d.Result;
 
             List<Record> result=null;
