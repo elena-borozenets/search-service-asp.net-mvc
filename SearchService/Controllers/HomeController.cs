@@ -32,8 +32,8 @@ namespace SearchService.Controllers
 
             string bingUrl = "https://www.bing.com/search?q=";
 
-            string yandexUrl = "https://www.yandex.com/search/?text=" + query;
-            var list = GetSearchResultAsync(query, googleUrl, bingUrl).Result;
+            string yandexUrl = "https://www.yandex.com/search/?text=" + searchString;
+            var list = GetSearchResultAsync(searchString, googleUrl, bingUrl).Result;
             //var list = GetGoogleSearchResult(query, googleUrl, bingUrl);
             var guid = _recordFacade.SaveRecords(list);
             var result = _recordFacade.GetRecordByRequestNumber(guid);
