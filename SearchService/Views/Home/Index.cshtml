@@ -1,13 +1,34 @@
 ﻿@using SearchService.Models
 @model IEnumerable<Record>
 
-@foreach (var m in Model)
+@using (Html.BeginForm("SearchInWeb", "Home", FormMethod.Get))
 {
-    <div class="media">
+    <p>
+        <div class="">
+            Search in web: <input type="text" name="searchString" class="form-control">
 
-        <div class="media-body">
-            <h2 class="media-heading">@m.Id</h2>
-            <p>@m.Text</p>
+            <input type="submit" value="Filter" class="btn btn-primary" />
         </div>
-    </div>
+    </p>
 }
+@using (Html.BeginForm("SearchInDb", "Home", FormMethod.Get))
+{
+    <p>
+        Search in db: <input type="text" name="searchString" class = "form-control">
+        <input type="submit" value="Filter" class="btn btn-primary"/>
+    </p>
+}
+
+    @foreach (var m in Model)
+    {
+        <div class="media">
+
+            <div class="media-body">
+                <h2 class="media-heading">@m.Title</h2>
+                @m.Link
+                <p>@m.Snippet</p>
+            </div>
+        </div>
+    }
+
+

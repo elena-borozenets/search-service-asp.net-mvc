@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace SearchService.Data.Entities
+namespace SearchService.Models
 {
-    public class Record
+    public class GoogleViewModel
     {
-        public int Id { get; set; }
         public string Title { get; set; }
         public string Snippet { get; set; }
         public string Link { get; set; }
-        public Guid RequestNumber { get; set; }
+    }
+    public class SearchViewModel
+    {
+        public List<Record> Items { get; set; }
     }
 }

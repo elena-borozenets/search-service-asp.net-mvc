@@ -28,7 +28,7 @@ namespace SearchService.Facade.Facades
         public IEnumerable<RecordModel> GetRecordBySearchString(string searchString)
         {
             var allRecords = _recordRepository.Get();
-            var result = allRecords.Where(r => r.Text.Contains(searchString));
+            var result = allRecords.Where(r => r.Snippet.Contains(searchString));
             var mappedResult = Mapper.Map<IEnumerable<RecordDBO>, IEnumerable<RecordModel>>(result);
             return mappedResult;
         }

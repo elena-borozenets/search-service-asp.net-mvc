@@ -22,8 +22,11 @@ namespace SearchService.Infrastructure.Repositories
         {
             using (var db = new RecordDbContext())
             {
-                var requestNumber=new Guid();
-                recordList.Select(r => r.RequestNumber = requestNumber);
+                var requestNumber=Guid.NewGuid();
+                foreach (var record in recordList)
+                {
+                    record.RequestNumber = requestNumber;
+                }
                 db.Records.AddRange(recordList);
                 db.SaveChanges();
                 return requestNumber;
@@ -46,7 +49,7 @@ namespace SearchService.Infrastructure.Repositories
         {
             using (var db = new RecordDbContext())
             {
-                var records = (from record in db.Records where record.RequestNumber==requestNumber select record);
+                var records = (from record in db.Records where record.RequestNumber.Equals(requestNumber) select record);
                 return records.ToList();
             }
         }
